@@ -4,7 +4,7 @@
 
 #ifndef P3_DEFNS_H
 #define P3_DEFNS_H
-#define INF 999999
+#define INF 999999999
 
 struct hashTableEntry {
     int vertexLabel;

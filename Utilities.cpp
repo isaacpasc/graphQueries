@@ -78,10 +78,10 @@ void buildVertexArray(std::string dates, int* vertexArr, int startYear, int endY
                 year += line[i];
                 if (getIntFromString(year) >= startYear && getIntFromString(year) <= endYear) {
                     vertexArr[index] = getIntFromString(id);
+                    index++;
                 }
                 year = "";
                 id = "";
-                index++;
                 continue;
             }
             if (line[i] == '\t') {

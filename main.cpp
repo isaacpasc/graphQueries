@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
 
         // begin print to stdout
         std::cout << "Command: start-graph " << startYear << " " << endYear << '\n' << std::endl;
-        std::cout << "The graph G for the years " << startYear << '-' << endYear << " has:" << std::endl;
+        std::cout << "The graph G for the years " << startYear << ' ' << endYear << " has:" << std::endl;
         std::cout << '\t' << "|V| = " << vertexArrSize << " vertices" << std::endl;
         std::cout << '\t' << "|E| = " << edgeCount << " edges\n" << std::endl;
 
@@ -74,7 +74,9 @@ int main(int argc, char** argv) {
             if (line[0] == 'o') {
                 // out-degree
                 float outDegree = floor(100 * (float(edgeCount)/vertexArrSize)) / 100; // compute out-degree with 2 places after decimal WITHOUT rounding
-                std::cout << "The graph G has an average out-degree " << edgeCount << '/' << vertexArrSize << " = " << outDegree << ".\n" << std::endl;
+                std::cout << "The graph G has average out-degree " << edgeCount << '/' << vertexArrSize << " = ";
+                printf("%.2f", outDegree);
+                std::cout << ".\n" << std::endl;
                 std::cout << "The out-degree distribution is:" << std::endl;
                 std::cout << '\t' << "Out-degree : Number of vertices" << std::endl;
                 for (int i = 0; i < vertexArrSize; i++) {
